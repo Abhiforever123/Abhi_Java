@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="com/ibsplc/common/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/com/ibsplc/common"/>
+	<classpathentry kind="lib" path="lib/AutoItX4Java.jar"/>
+	<classpathentry kind="lib" path="lib/jacob.jar"/>
+	<classpathentry kind="lib" path="lib/javax.jms-1.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

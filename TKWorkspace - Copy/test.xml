@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression">
+    <parameter name="browser" value="chrome"/>
+    <!--<parameter name="URL" value="http://192.168.16.70:7001/icargo/"/>-->
+    <parameter name="URL" value="http://192.168.45.4:11000/icargoTKdemo/"/>
+    <parameter name="Version" value="4.5.3"/>
+    <parameter name="User Name" value="A-7681"/>
+    <parameter name="DBreportReq" value="false"/>
+    <parameter name="EventLogReq" value="false"/>
+    <test name="Test1" preserve-order="true">
+        <!--<groups>
+            <run>
+                <include name="P1"/>
+            </run>
+        </groups>-->
+        <classes>
+            <!--<class name = "com.ibsplc.Test.ICargo_TK_ST_SAL_Flight"></class>-->
+            <!--<class name = "com.ibsplc.Test.ICargo_TK_ST_SAL_Booking"></class>-->
+            <!--<class name = "com.ibsplc.Test.ICargo_TK_ST_SAL_Stock"></class>-->
+            <!--<class name = "com.ibsplc.Test.ICargo_TK_ST_SAL_Rating"></class>-->
+            <!--<class name = "com.ibsplc.Test.ICargo_TK_ST_OPS_Capture_Acceptance"></class>-->
+            <class name = "com.ibsplc.Test.ICargo_TK_ST_OPS_ExportManifest"></class>
+        </classes>
+    </test>
+</suite>
+
