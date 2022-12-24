@@ -11,8 +11,9 @@ public class SecondLargestUsingArray {
 	{
 		
 		
-		
+		//************************************** Sorting the array using conventional for loop **********************
 		int temp=0;
+		
 		for(int i=0;i<total;i++)
 		{
 			for(int j = i+1;j<total;j++)
@@ -29,6 +30,8 @@ public class SecondLargestUsingArray {
 			System.out.println(a[i]);
 			
 		}
+		
+		//*********************************************** Sort End ****************************************************
 			return a[total-2];
 
 	}

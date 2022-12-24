@@ -21,6 +21,7 @@ public class NumberOfWordsInASentence {
 		return count;
 	}
 
+
 	public static void main(String[] args) {
 		System.out.println("Enter the sentence");
 		Scanner scanner = new Scanner(System.in);
