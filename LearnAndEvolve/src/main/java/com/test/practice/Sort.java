@@ -1,5 +1,6 @@
 package com.test.practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sort {
@@ -19,6 +20,8 @@ public class Sort {
 	{
 		char a[] = str.toCharArray(); //convert the string to character array
 		
+		
+		//Arrays.sort(a); // ------>using this single line of code we can achieve the below functionality
 		char temp;
 		
 		for(int i=0;i<a.length;i++)
