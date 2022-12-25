@@ -22,6 +22,40 @@ public class StringBuilderExamples {
 		sb.insert(0, 'K'); //inserts K into the first index position of the String returns KAbhi
 		System.out.println(sb);
 		
+		sb.delete(0,1); // Deletes the K inserted in KAbhi to Abhi delete starts from index 0 to position index 1	
+		System.out.println(sb);
+		
+		
+		StringBuilder sb2 = new StringBuilder("h");
+		sb2.append("e");
+		sb2.append("llo");
+		System.out.println(sb2);
+		
+		reverseString("Abhil");
+	}
+	
+	
+	
+	public static void reverseString(String str)
+	{
+		StringBuilder sb = new StringBuilder(str);
+		
+		for(int i=0;i<sb.length()/2;i++)
+		{
+			int firstCharIndex=i;
+			
+			int lastCharIndex = sb.length()-1-i;
+			
+			char firstChar= sb.charAt(firstCharIndex);
+			
+			char lastChar= sb.charAt(lastCharIndex);
+			
+			sb.setCharAt(firstCharIndex, lastChar);
+			sb.setCharAt(lastCharIndex, firstChar);
+			
+		}
+		
+		System.out.println("Reversed string is: "+sb);
 	}
 
 }

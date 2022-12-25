@@ -41,5 +41,10 @@ public class RemoveSpecialCharInString {
 		
 		System.out.println("Removed Special Character string is: "+removedString);
 	}
+	
+	public static String usingReplaceAll(String str)
+	{
+		return str.replaceAll("[^a-zA-Z0-9]", "");
+	}
 
 }
