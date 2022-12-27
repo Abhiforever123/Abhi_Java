@@ -1,6 +1,10 @@
 package com.test.practice;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -64,11 +68,62 @@ public class RemoveDuplicates {
 		
 		for(Character c: set)
 		{
-			sb.append(c);
+			sb.append(c); 
 		
 		}
 		
 		System.out.println(sb);
+	}
+	
+	
+	public static void findDuplicatesStringArray(String[] str)
+	{
+		for(int i=0;i<str.length;i++)
+		{
+			for(int j=i+1;j<str.length;j++)
+			{
+				if(str[i].equals(str[j]))
+					System.out.println("Duplicate elements are: "+str[i]);
+			}
+		}
+	}
+	
+	public static void findDuplicateUsingSet(String val)
+	{
+		String[] str=val.split(" ");
+		Set<String> store = new HashSet<String>();
+		for(String values: str)
+		{
+			if(store.add(values)==false)
+				System.out.println("Duplicate entry is: "+str);
+		}
+		
+	}
+	
+	public static void findDuplicateUsingMap(String val)
+	{
+		String[] str=val.split(" ");
+		Integer count =0;
+		Map<String,Integer> storeMap = new HashMap<String,Integer>();
+		for(String values:str)
+		{
+			count = storeMap.get(values);
+			if(count==null)
+				System.out.println("The String doesn't have any duplicates as its occurrance is: "+storeMap.put(values, 1));
+			else
+				System.out.println("The String occurs with : "+storeMap.put(val, count++)+" times");
+		}
+		
+		//printing these values using an entryset
+		
+		Set<Entry<String,Integer>> entrySet = storeMap.entrySet();
+		for(Entry<String,Integer> entry: entrySet)
+		{
+			if(entry.getValue()>1)
+				System.out.println("The String is duplicate: "+entry.getKey());
+		}
+		
+		
 	}
 	
 	
