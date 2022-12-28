@@ -1,5 +1,7 @@
 package com.test.practice;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class StringContainsNumber {
@@ -18,6 +20,25 @@ public class StringContainsNumber {
 		}
 		System.out.println(sb);
 		System.out.println("Total count is :"+count);
+	}
+	
+	
+	public static boolean usingArrayListAndStrings(String str)
+	{
+		String numbersInString ="1234567890";
+		List<Character> numbers = new ArrayList<>();
+		
+		for(int i=0;i<numbersInString.length();i++)
+		{
+			numbers.add(numbersInString.charAt(i));
+		}
+		for(int i=0;i<str.length();i++)
+		{
+			if(!(numbers.contains(str.charAt(i))))
+				return false;
+		}
+		
+		return true;
 	}
 	
 	public static void main(String[] args)
