@@ -84,7 +84,7 @@ public class PatternPriniting {
 	 */
 	public static void rightTiangle()
 	{
-
+System.out.println("Test");
 	}
 	
 	
