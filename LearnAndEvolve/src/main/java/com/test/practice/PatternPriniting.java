@@ -6,7 +6,7 @@ public class PatternPriniting {
 	public static void main(String[] args) {
 		
 //		rightTriangle();
-//		leftTraingleDown();
+//		rightTraingleDown();
 		rightTiangle();
 		
 		
@@ -55,7 +55,7 @@ public class PatternPriniting {
 	 *   @description : Print the above pattern
 	 * 
 	 */
-	public static void leftTraingleDown()
+	public static void rightTraingleDown()
 	{
 		for(int i=7;i>0;i--)
 		{
