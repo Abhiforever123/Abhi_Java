@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- <suite name="ICargoAutomationSuite"> -->
+<suite name="Regression">
+
+
+			<parameter name="browser" value="chrome"/>
+			<parameter name="Implementation" value="ANY"/>
+			<parameter name="version" value="4.7.3">
+			
+			<parameter name="username" value="TestUser"/>
+			<parameter name="password" value="******"/>
+			<parameter name="DBreportReq" value="false"/>
+			<parameter name="EventLogReq" value="false"/>
+			<parameter name="URL" value=""/s>
+			<parameter name="" value="">
+			
+			<Listeners>
+				<listener class-name="com.ibsplc.common.BaseSetup"></listener>
+			</Listeners>	
+			  <test thread-count="5" name="Test" preserve-order="true">
+			    <classes>
+			    <!-- The base functionality class -->
+			      <class name="com.ibsplc.test.ICargo_Test_BaseSample_Class"/>
+			    </classes>
+			  </test> <!-- Test -->
+			</suite> <!-- Suite -->
