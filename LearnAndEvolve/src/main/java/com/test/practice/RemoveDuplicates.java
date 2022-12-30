@@ -30,10 +30,12 @@ public class RemoveDuplicates {
 		}
 		System.out.println(sb);
 	}
-	
+	//need to correct it
 	public static void usingCharacterArray(String str)
+//	public static void usingStringArray(String str)
 	{
-		char[] arr = str.toCharArray();
+		//char[] arr = str.toCharArray();
+		String[] arr = str.split(" ");
 		
 		StringBuilder sb = new StringBuilder();
 		for(int i=0; i<arr.length;i++)
@@ -55,7 +57,6 @@ public class RemoveDuplicates {
 			System.out.println(sb);
 		}
 	}
-	
 	
 	public static void usingSetInterface(String str)
 	{
@@ -95,9 +96,10 @@ public class RemoveDuplicates {
 		for(String values: str)
 		{
 			if(store.add(values)==false)
-				System.out.println("Duplicate entry is: "+str);
+				System.out.println("Duplicate entry is: "+values);
+			
 		}
-		
+		System.out.println("Entries without duplicates"+store.toString().replace(",", ""));
 	}
 	
 	public static void findDuplicateUsingMap(String val)
@@ -133,9 +135,11 @@ public class RemoveDuplicates {
 		System.out.println("Enter the String to check for the duplicates");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
-		removeDuplicateUsingJava8Streams(str);
-		usingStringIndex(str);
-		usingCharacterArray(str);
+//		removeDuplicateUsingJava8Streams(str);
+//		usingStringIndex(str);
+//		usingCharacterArray(str);
+		
+		findDuplicateUsingSet(str);
 		sc.close();
 		
 	}
