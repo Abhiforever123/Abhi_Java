@@ -30,4 +30,20 @@ public class ReverseEachWordInAString {
 		String str = sc.nextLine();
 		usingTraditionalMethod(str);
 	}
+	
+	public static int reverseNumber(int num)
+	{
+		int temp = num;
+		int rev=0;
+		while(num!=0)
+		{
+			rev= num%10;
+			
+			rev= rev*10+num;
+			
+			num = num/10;
+		}
+		
+		return rev;
+	}
 }
