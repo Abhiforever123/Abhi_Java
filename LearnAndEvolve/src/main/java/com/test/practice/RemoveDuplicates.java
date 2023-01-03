@@ -1,8 +1,10 @@
 package com.test.practice;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
@@ -77,8 +79,9 @@ public class RemoveDuplicates {
 	}
 	
 	
-	public static void findDuplicatesStringArray(String[] str)
+	public static void findDuplicatesStringArray(String sentense)
 	{
+		String[] str = sentense.split(" ");
 		for(int i=0;i<str.length;i++)
 		{
 			for(int j=i+1;j<str.length;j++)
@@ -86,6 +89,19 @@ public class RemoveDuplicates {
 				if(str[i].equals(str[j]))
 					System.out.println("Duplicate elements are: "+str[i]);
 			}
+		}
+	}
+	
+	public static void findDuplicateCharacter(String str)
+	{
+		char[] chars = str.toCharArray();
+		for(int i=0;i<chars.length;i++)
+		{
+		for(int j=i+1;j<chars.length;j++)
+		{
+			if(chars[i]==(chars[j]))
+				System.out.println("Duplicate elements are: "+chars[i]);
+		}
 		}
 	}
 	
@@ -109,6 +125,7 @@ public class RemoveDuplicates {
 		Map<String,Integer> storeMap = new HashMap<String,Integer>();
 		for(String values:str)
 		{
+			//duplicate keys are not allowed in hashmap
 			count = storeMap.get(values);
 			if(count==null)
 				System.out.println("The String doesn't have any duplicates as its occurrance is: "+storeMap.put(values, 1));
@@ -142,5 +159,40 @@ public class RemoveDuplicates {
 		findDuplicateUsingSet(str);
 		sc.close();
 		
+	}
+	
+	
+	public void usingListAndSet()
+	{
+		 List<Integer> primes = new ArrayList<Integer>();
+	       
+	        primes.add(2);
+	        primes.add(3);
+	        primes.add(5);
+	        primes.add(7);  //duplicate
+	        primes.add(7);
+	        primes.add(11);
+	       
+	        // let's print arraylist with duplicate
+	        System.out.println("list of prime numbers : " + primes);
+	       
+	        // Now let's remove duplicate element without affecting order
+	        // LinkedHashSet will guaranteed the order and since it's set
+	        // it will not allow us to insert duplicates.
+	        // repeated elements will automatically filtered.
+	       
+	        Set<Integer> primesWithoutDuplicates
+	                   = new LinkedHashSet<Integer>(primes);
+	       
+	        // now let's clear the ArrayList so that we can 
+	        // copy all elements from LinkedHashSet
+	        primes.clear();
+	       
+	        // copying elements but without any duplicates
+	        primes.addAll(primesWithoutDuplicates);
+	       
+	        System.out.println("list of primes without duplicates : " + primes);
+	       
+	    }
 	}
 }

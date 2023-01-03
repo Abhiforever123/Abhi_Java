@@ -36,4 +36,8 @@ public class ReadDataFromFile {
 			System.out.println(scanner.hasNextLine());
 		
 	}
+	
+	public static void main(String[] args) {
+		
+	}
 }
